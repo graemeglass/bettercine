@@ -2,9 +2,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
 import re
-from imdb import IMDb
 import os
-ia = IMDb()
 
 base_url = "http://www.sterkinekor.mobi"
 
@@ -114,8 +112,8 @@ def getShowtimes(movie_id, cinema_id):
     return showtimes
 
 def main():
-    region_id=4
-    cinema_id=164
+    region_id = 4
+    cinema_id = 164
     movies = getMovieList(region_id, cinema_id, False)
 
     fdir = os.path.dirname(os.path.realpath(__file__))
